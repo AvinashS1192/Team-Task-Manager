@@ -48,4 +48,26 @@ cd Team-Task-Manager
 npm install
 ```
 
+### 2. Create .env file with
+
+# Database Connection
+
+# Production (PostgreSQL): "postgresql://user:password@host:port/dbname"
+
+DATABASE_URL="your_database_url_here"
+
+# NextAuth Configuration
+
+# A secret string used to encrypt cookies. Generate one with: openssl rand -base64 32
+
+NEXTAUTH_SECRET="your_secure_random_secret"
+
+# The base URL of your application
+
+# Local: "http://localhost:3000"
+
+# Production: "https://your-app-name.railway.app"
+
+NEXTAUTH_URL="your_app_url"
+
 -m
