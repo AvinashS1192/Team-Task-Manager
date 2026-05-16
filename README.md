@@ -43,7 +43,7 @@ A modern, full-stack project management application built with the **Next.js App
 ### 1. Clone and Install
 
 ```bash
-git clone [https://github.com/AvinashS1192/Team-Task-Manager.git](https://github.com/AvinashS1192/Team-Task-Manager.git)
+git clone https://github.com/AvinashS1192/Team-Task-Manager.git
 cd Team-Task-Manager
 npm install
 ```
