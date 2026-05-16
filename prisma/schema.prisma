@@ -22,7 +22,7 @@ model User {
   name           String?
   email          String    @unique
   passwordHash   String
-  role           String    @default("MEMBER") // SQLite doesn't natively support enums perfectly, so we use a String default
+  role           Role    @default(MEMBER) 
   projectsOwned  Project[] @relation("ProjectOwner")
   tasksAssigned  Task[]    @relation("TaskAssignee")
 }

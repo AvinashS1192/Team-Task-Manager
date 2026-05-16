@@ -115,8 +115,7 @@ export default function AuthForm() {
           />
         </div>
 
-        {/* Hidden role field for demo purposes: setting everyone to ADMIN so you can see all features */}
-        {!isLogin && <input type="hidden" name="role" value="ADMIN" />}
+        {!isLogin && <input type="hidden" name="role" value="MEMBER" />}
 
         <button
           type="submit"

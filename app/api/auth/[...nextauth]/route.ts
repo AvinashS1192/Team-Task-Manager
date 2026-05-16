@@ -1,4 +1,3 @@
-// app/api/auth/[...nextauth]/route.ts
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { prisma } from "@/lib/prisma";
@@ -28,7 +27,6 @@ export const authOptions = {
 
         if (!isPasswordValid) return null;
 
-        // Return the user object (this gets passed to the JWT callback)
         return {
           id: user.id,
           email: user.email,
@@ -59,7 +57,7 @@ export const authOptions = {
     strategy: "jwt" as const,
   },
   pages: {
-    signIn: "/login", // Redirects to the homepage if login is required
+    signIn: "/login",
   },
 };
 
