@@ -1,4 +1,5 @@
-// app/dashboard/new-task/page.tsx
+export const dynamic = "force-dynamic";
+
 import { createTask } from "@/actions/adminActions";
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";

@@ -30,6 +30,7 @@ export async function createProject(formData: FormData) {
   });
 
   revalidatePath("/dashboard");
+  revalidatePath("/dashboard/new-task");
   redirect("/dashboard");
 }
 
