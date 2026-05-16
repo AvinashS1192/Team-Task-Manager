@@ -32,7 +32,7 @@ A modern, full-stack project management application built with the **Next.js App
 
 - **Framework:** [Next.js](https://nextjs.org/) (App Router)
 - **Language:** TypeScript
-- **Database:** SQLite/PostgreSQL (via [Prisma ORM](https://www.prisma.io/))
+- **Database:** PostgreSQL (via [Prisma ORM](https://www.prisma.io/))
 - **Authentication:** [NextAuth.js](https://next-auth.js.org/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 
@@ -43,7 +43,7 @@ A modern, full-stack project management application built with the **Next.js App
 ### 1. Clone and Install
 
 ```bash
-git clone [https://github.com/your-username/team-taskflow.git](https://github.com/your-username/team-taskflow.git)
-cd team-taskflow
+git clone [https://github.com/AvinashS1192/Team-Task-Manager.git](https://github.com/AvinashS1192/Team-Task-Manager.git)
+cd Team-Task-Manager
 npm install
 ```
