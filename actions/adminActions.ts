@@ -1,7 +1,7 @@
 // actions/adminActions.ts
 "use server";
 
-import { prisma } from "@/lib/prisma";
+import { prisma, Role } from "@/lib/prisma";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
@@ -82,7 +82,7 @@ export async function searchUsers(query: string) {
 }
 
 // Update a user's role
-export async function updateUserRole(userId: string, newRole: string) {
+export async function updateUserRole(userId: string, newRole: Role) {
   await requireAdmin();
 
   await prisma.user.update({
