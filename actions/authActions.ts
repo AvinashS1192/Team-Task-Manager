@@ -1,7 +1,7 @@
 // actions/authActions.ts
 "use server";
 
-import { prisma } from "@/lib/prisma";
+import { prisma, Role } from "@/lib/prisma";
 import bcrypt from "bcrypt";
 
 export async function registerUser(formData: FormData) {
@@ -9,7 +9,7 @@ export async function registerUser(formData: FormData) {
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
   // Let's make the first user an ADMIN, or allow passing a role for testing
-  const role = (formData.get("role") as string) || "MEMBER";
+  const role = (formData.get("role") as Role) || ("MEMBER" as Role);
 
   if (!email || !password) {
     return { error: "Email and password are required" };

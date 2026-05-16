@@ -5,6 +5,7 @@ import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { registerUser } from "@/actions/authActions";
+import { Role } from "@/lib/prisma";
 
 export default function AuthForm() {
   const router = useRouter();
@@ -115,7 +116,9 @@ export default function AuthForm() {
           />
         </div>
 
-        {!isLogin && <input type="hidden" name="role" value="MEMBER" />}
+        {!isLogin && (
+          <input type="hidden" name="role" value={"MEMBER" as Role} />
+        )}
 
         <button
           type="submit"
