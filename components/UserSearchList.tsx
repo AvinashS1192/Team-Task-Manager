@@ -3,6 +3,7 @@
 
 import { useState, useTransition } from "react";
 import { updateUserRole, searchUsers } from "@/actions/adminActions";
+import { Role } from "@/lib/prisma";
 
 export default function UserSearchList({
   initialUsers,
@@ -28,7 +29,8 @@ export default function UserSearchList({
   };
 
   const toggleRole = (userId: string, currentRole: string) => {
-    const newRole = currentRole === "ADMIN" ? "MEMBER" : "ADMIN";
+    const newRole =
+      currentRole === "ADMIN" ? ("MEMBER" as Role) : ("ADMIN" as Role);
     startTransition(async () => {
       await updateUserRole(userId, newRole);
       // Update local state to show change immediately
